@@ -9,15 +9,26 @@
         android:id="@+id/mainFragment"
         android:name="com.example.testing.wanjetpack.ui.main.MainFragment"
         android:label="main_fragment"
-        tools:layout="@layout/main_fragment" >
+        tools:layout="@layout/main_fragment">
         <action
             android:id="@+id/action_mainFragment_to_secondFragment"
             app:destination="@id/secondFragment"
             app:enterAnim="@anim/anim_in"
             app:popExitAnim="@anim/anim_out" />
+        <action
+            android:id="@+id/action_mainFragment_to_secondFragment2"
+            app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_pagingTextActivity"
+            app:destination="@id/pagingTextActivity" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.example.testing.wanjetpack.ui.main.SecondFragment"
         android:label="SecondFragment" />
+    <activity
+        android:id="@+id/pagingTextActivity"
+        android:name="com.example.testing.wanjetpack.ui.main.PagingTextActivity"
+        android:label="paging_text_activity"
+        tools:layout="@layout/paging_text_activity" />
 </navigation>

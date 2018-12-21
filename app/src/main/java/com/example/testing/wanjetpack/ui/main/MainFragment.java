@@ -67,6 +67,15 @@ public class MainFragment extends Fragment {
                         .navigate(R.id.action_mainFragment_to_secondFragment, bundle);
             }
         });
+
+        contentView.findViewById(R.id.tv_test_paging).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment
+                        .findNavController(MainFragment.this)
+                        .navigate(R.id.action_mainFragment_to_pagingTextActivity);
+            }
+        });
     }
 
     private void useWorkManager() {
